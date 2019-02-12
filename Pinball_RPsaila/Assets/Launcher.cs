@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Launcher : MonoBehaviour
 {
-    public string button = "Launch";
+    public string button = "Launcher";
     // Start is called before the first frame update
     void Start()
     {

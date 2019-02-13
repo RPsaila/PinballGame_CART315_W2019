@@ -1,9 +1,11 @@
 ﻿<Properties StartupConfiguration="{52C5507F-0F01-F1D1-5D8D-A24509C154C7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Score.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CollisionList.cs">
     <Files>
-      <File FileName="Assets/Scripts/Bumper.cs" Line="33" Column="25" />
-      <File FileName="Assets/Scripts/gameover.cs" Line="13" Column="9" />
-      <File FileName="Assets/Scripts/Score.cs" Line="24" Column="9" />
+      <File FileName="Assets/Scripts/Bumper.cs" Line="13" Column="6" />
+      <File FileName="Assets/Scripts/gameover.cs" Line="28" Column="37" />
+      <File FileName="Assets/Scripts/Score.cs" Line="48" Column="29" />
+      <File FileName="Assets/Scripts/TriggerFlipper.cs" Line="22" Column="25" />
+      <File FileName="Assets/Scripts/CollisionList.cs" Line="5" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

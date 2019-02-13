@@ -5,8 +5,10 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     // Created a list to help deal with all the added balls and their destruction
+    // Help from : https://answers.unity.com/questions/627316/limit-instantiation.html
+    // username : rutter
 
-    List<GameObject> balls = new List<GameObject>();
+    public List<GameObject> balls = new List<GameObject>();
 
     public TMPro.TextMeshPro multipliertext;
     public GameObject theball;
@@ -33,20 +35,25 @@ public class Score : MonoBehaviour
 
         if (multiplier == 3 && balls.Count < maxBalls)
         {
-        GameObject ball = (GameObject)Instantiate(ballPrefab);
+        GameObject ball = Instantiate(ballPrefab);
         balls.Add(ball);
         }
 
         // when multiplier is back to normal, balls disappear
 
-        else if (multiplier < 3)
-        {
-            foreach (GameObject ball in balls)
-            {
-                Destroy(ball);
-            }
-            balls.Clear();
-        }
+        // CODE USED TEMPORARLY AND MOVED TO Game Over script
+        // Because extra balls would disappear when pressing the Trigger Keys
+        // Implement logic with Game Over script & GamerOverZone 
+        // or detect movement along Y axis from balls or position to destroy them
+
+        // else if (multiplier  < 3)
+        // {
+        //foreach (GameObject ball in balls)
+        //  {
+        //Destroy(ball);
+        //  }
+        // balls.Clear();
+        // }
     }
 
     public void AddScore(int points)

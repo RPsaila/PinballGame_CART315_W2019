@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{52C5507F-0F01-F1D1-5D8D-A24509C154C7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameOver.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameOverTest.cs">
     <Files>
       <File FileName="../../CART315Pinball/Assets/gameover.cs" Line="31" Column="6" />
       <File FileName="Assets/Scripts/GameOver.cs" Line="5" Column="38" />

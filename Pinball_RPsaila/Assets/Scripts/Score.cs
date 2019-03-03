@@ -15,6 +15,7 @@ public class Score : MonoBehaviour
     public TMPro.TextMeshPro multipliertext;
     public GameObject theball;
     public GameObject ballPrefab;
+    public GameObject[] newBalls;
 
     public int ballCount;
     public int maxBalls = 1;
@@ -45,25 +46,19 @@ public class Score : MonoBehaviour
                 Debug.Log("it works!");
             }
             balls.Add(ballPrefab);
-            ballCount++;
-            //Debug.Log(balls.Count);
+            ballCount++; 
         }
 
-        // CODE USED TEMPORARLY AND MOVED TO Game Over script
-        // Because extra balls would disappear when pressing the Trigger Keys
-        // Implement logic with Game Over script & GamerOverZone 
-        // or detect movement along Y axis from balls or position to destroy them
 
-        // when multiplier is back to normal, balls disappear
-
-        //else if (multiplier  < 3)
-        //{
-        //   for (int i = 0; i < balls.Count; i++)
-        //   {
-        //       Destroy(balls[i]);
-        // }
-        //balls.Clear();
-        //}
+        else if (multiplier < 3)
+        {
+            GameObject.FindGameObjectsWithTag("SpawnedBalls");
+            newBalls = GameObject.FindGameObjectsWithTag("SpawnedBalls");
+            foreach (GameObject SpawnedBalls in newBalls)
+            {
+                Destroy(SpawnedBalls);
+            }
+        }
     }
 
     public void AddScore(int points)

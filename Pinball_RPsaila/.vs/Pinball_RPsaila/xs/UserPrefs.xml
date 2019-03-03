@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{52C5507F-0F01-F1D1-5D8D-A24509C154C7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameOverTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameOver.cs">
     <Files>
       <File FileName="../../CART315Pinball/Assets/gameover.cs" Line="31" Column="6" />
-      <File FileName="Assets/Scripts/GameOver.cs" Line="8" Column="31" />
-      <File FileName="Assets/Scripts/Score.cs" Line="15" Column="45" />
-      <File FileName="Assets/Scripts/GameOverTest.cs" Line="12" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/GameOver.cs" Line="5" Column="38" />
+      <File FileName="Assets/Scripts/Score.cs" Line="19" Column="26" />
+      <File FileName="Assets/Scripts/GameOverTest.cs" Line="2" Column="22" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

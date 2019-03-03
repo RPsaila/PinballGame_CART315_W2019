@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gameover : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
     private Vector3 initialposition;
     public GameObject theball;
-    public List<GameObject> balls = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +17,23 @@ public class gameover : MonoBehaviour
     void FixedUpdate()
     {
 
+   // GameObject[] spawnedBalls = balls.ToArray();
+      
     }
 
-    private void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject == theball)
-        {
+//    private void OnTriggerEnter(GameObject other)
+//    {
+//        if (other.gameObject.tag == "Ball")
+//                {
+//            Debug.Log(balls.Count);
+//            foreach (var item in spawnedBalls)
+//            {
+//                GetComponent<item> 
+//            }
+//            //  theball.transform.position = initialposition;
+//        }
+//    }
+//}
 
             //Looking to implement logic where the collider would also detect the spawned balls 
 
@@ -33,12 +43,12 @@ public class gameover : MonoBehaviour
                 //Destroy(balls);
                 //    {
                 //balls.Clear();
-                        {
-                    theball.transform.position = initialposition;
-                    //balls.transform.position = initialposition;
-                            }
-                        }
-                    }
+                    //    {
+                    //theball.transform.position = initialposition;
+                    ////balls.transform.position = initialposition;
+                    //        }
+                    //    }
+                    //}
         //        }
         //    }
         //}

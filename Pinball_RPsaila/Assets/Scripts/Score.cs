@@ -8,14 +8,13 @@ public class Score : MonoBehaviour
     // Help from : https://answers.unity.com/questions/627316/limit-instantiation.html
     // username : rutter
 
-    //public GameObject[] balls;
-
     public List<GameObject> balls = new List<GameObject>();
 
     public TMPro.TextMeshPro multipliertext;
     public GameObject theball;
     public GameObject ballPrefab;
     public GameObject[] newBalls;
+
 
     public int ballCount;
     public int maxBalls = 1;
@@ -27,7 +26,6 @@ public class Score : MonoBehaviour
     void Start()
     {
         balls.AddRange(GameObject.FindGameObjectsWithTag("Player"));
-
     }
 
     // Update is called once per frame
@@ -50,13 +48,18 @@ public class Score : MonoBehaviour
         }
 
 
-        else if (multiplier < 3)
+        else if (multiplier > 20)
         {
+            ResetMultiplier();
+            ballCount = 0;
             GameObject.FindGameObjectsWithTag("SpawnedBalls");
             newBalls = GameObject.FindGameObjectsWithTag("SpawnedBalls");
             foreach (GameObject SpawnedBalls in newBalls)
             {
+                balls.Clear();
+                Debug.Log(balls.Count);
                 Destroy(SpawnedBalls);
+
             }
         }
     }

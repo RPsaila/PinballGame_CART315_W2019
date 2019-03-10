@@ -46,12 +46,9 @@ public class GameOverTest : MonoBehaviour
             //{
                 if (collider.gameObject.tag == "SpawnedBalls")
                 {
-            foreach (GameObject SpawnedBalls in newBalls)
-                    {
-                        SpawnedBalls.transform.localPosition = initialposition;//new Vector3(newBalls[i].transform.localPosition.x, newBalls[i].transform.localPosition.y, newBalls[i].transform.localPosition.z);
+                       collider.gameObject.transform.localPosition = initialposition;//new Vector3(newBalls[i].transform.localPosition.x, newBalls[i].transform.localPosition.y, newBalls[i].transform.localPosition.z);
                     }
-
-        }
+                    
             }
         }
 

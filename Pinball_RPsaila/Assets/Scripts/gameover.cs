@@ -16,9 +16,7 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
-   // GameObject[] spawnedBalls = balls.ToArray();
-      
+    
     }
 
 //    private void OnTriggerEnter(GameObject other)

@@ -38,12 +38,12 @@ public class Score : MonoBehaviour
         if (multiplier == 3 && ballCount < maxBalls)
         {
             GameObject newBall = Instantiate(ballPrefab, theball.transform.position, theball.transform.rotation) as GameObject;
-            ballPrefab.gameObject.tag = "SpawnedBalls";
+            newBall.gameObject.tag = "SpawnedBalls";
             if (GameObject.FindGameObjectsWithTag("SpawnedBalls").Length > 1)
             {
                 Debug.Log("it works!");
             }
-            balls.Add(ballPrefab);
+            balls.Add(newBall);
             ballCount++; 
         }
 

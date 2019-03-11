@@ -19,8 +19,8 @@ public class Score : MonoBehaviour
     public int ballCount;
     public int maxBalls = 1;
 
-    int score = 0;
-    int multiplier = 1;
+    public int score = 0;
+    public int multiplier = 1;
 
     // Start is called before the first frame update
     void Start()

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Bumper : MonoBehaviour
 {
-    public Score thescore;
+    public GameObject thescoreobject;
     private int timer = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+
+
+
     }
 
     // Update is called once per frame
@@ -29,8 +31,8 @@ public class Bumper : MonoBehaviour
     {
         if (timer == 0)
         {
-            thescore.AddScore(5);
-            thescore.Addmultiplier(1);
+            thescoreobject.GetComponent<Score>().AddScore(5);
+            thescoreobject.GetComponent<Score>().Addmultiplier(1);
         }
 
         this.GetComponent<AudioSource>().Play();

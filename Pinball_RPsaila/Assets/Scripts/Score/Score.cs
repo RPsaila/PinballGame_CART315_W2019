@@ -57,7 +57,7 @@ public class Score : MonoBehaviour
             foreach (GameObject SpawnedBalls in newBalls)
             {
                 balls.Clear();
-                Debug.Log(balls.Count);
+               // Debug.Log(balls.Count);
                 Destroy(SpawnedBalls);
 
             }

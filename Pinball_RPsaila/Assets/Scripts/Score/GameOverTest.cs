@@ -11,10 +11,16 @@ public class GameOverTest : MonoBehaviour
     public List<GameObject> balls;
     public GameObject[] newBalls;
 
+    public TMPro.TextMeshPro theScore;
+
+    //public bool GameOverWorks;
+    private int currentScore;
+
     IEnumerator Start()
     {
         initialposition = theball.transform.position;
         myScoreScript = GetComponent<Score>();
+        currentScore = theScore.GetComponent<Score>().score;
         yield return new WaitForEndOfFrame();
     }
 
@@ -24,6 +30,7 @@ public class GameOverTest : MonoBehaviour
 
         GameObject.FindGameObjectsWithTag("SpawnedBalls");
         newBalls = GameObject.FindGameObjectsWithTag("SpawnedBalls");
+        currentScore = theScore.GetComponent<Score>().score;
 
         //KEEPING FOR LATER USE
         //foreach (GameObject SpawnedBalls in myScoreScript.balls)
@@ -34,20 +41,21 @@ public class GameOverTest : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject.tag == "Player")
-        {
-           theball.transform.position = initialposition;
+        if (currentScore < 1500 && collider.gameObject.tag == "Player")
+            {
+            theball.transform.position = initialposition;
         }
 
         //KEEPING FOR LATER USE
         //for (int i = 0; i < 3; i++)
         //{
-            //if (newBalls[i] != null)  
-            //{
-                if (collider.gameObject.tag == "SpawnedBalls")
-                {
-                       collider.gameObject.transform.localPosition = initialposition;//new Vector3(newBalls[i].transform.localPosition.x, newBalls[i].transform.localPosition.y, newBalls[i].transform.localPosition.z);
-                    }
+        //if (newBalls[i] != null)  
+        //{
+        if (collider.gameObject.tag == "SpawnedBalls")
+            {
+                collider.gameObject.transform.localPosition = initialposition;//new Vector3(newBalls[i].transform.localPosition.x, newBalls[i].transform.localPosition.y, newBalls[i].transform.localPosition.z);
+                
+                }
                     
             }
         }

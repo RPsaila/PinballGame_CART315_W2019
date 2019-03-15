@@ -368,3 +368,5 @@
 /Users/RobinPsaila/Desktop/CART315/GitRepository/PinballGame_CART315_W2019/Pinball_RPsaila/obj/Debug/Assembly-CSharp-firstpass.csproj.CopyComplete
 /Users/RobinPsaila/Desktop/CART315/GitRepository/PinballGame_CART315_W2019/Pinball_RPsaila/obj/Debug/Assembly-CSharp-firstpass.dll
 /Users/RobinPsaila/Desktop/CART315/GitRepository/PinballGame_CART315_W2019/Pinball_RPsaila/obj/Debug/Assembly-CSharp-firstpass.pdb
+/Users/RobinPsaila/Desktop/CART315/GitRepository/PinballGame_CART315_W2019/Pinball_RPsaila/Temp/bin/Debug/Vuforia.UnityExtensions.dll
+/Users/RobinPsaila/Desktop/CART315/GitRepository/PinballGame_CART315_W2019/Pinball_RPsaila/Temp/bin/Debug/Vuforia.UnityExtensions.xml

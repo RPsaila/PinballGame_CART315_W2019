@@ -1,19 +1,21 @@
 ﻿<Properties StartupConfiguration="{52C5507F-0F01-F1D1-5D8D-A24509C154C7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CloudBounce.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../Downloads/Unity-CheckPoints-master/Assets/Scripts/CheckPoint.cs">
     <Files>
-      <File FileName="Assets/Scripts/Teleporter.cs" Line="25" Column="1" />
-      <File FileName="Assets/Scripts/SimpleSave.cs" Line="54" Column="1" />
-      <File FileName="Assets/Scripts/GameControl.cs" Line="35" Column="1" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="39" Column="27" />
-      <File FileName="Assets/Scripts/Score/GameOverTest.cs" Line="46" Column="58" />
-      <File FileName="Assets/Scripts/Clock.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/CloudBounce.cs" Line="29" Column="6" />
-      <File FileName="Assets/Scripts/CameraControl.cs" Line="50" Column="6" NotebookId="1" />
-      <File FileName="Assets/Scripts/Score/Score.cs" Line="69" Column="32" NotebookId="1" />
-      <File FileName="Assets/Scripts/AdjustScript.cs" Line="27" Column="1" NotebookId="1" />
-      <File FileName="Assets/SaveLoad/MainMenu.cs" Line="21" Column="1" NotebookId="1" />
-      <File FileName="Assets/Scripts/Pinball Table/Bumper.cs" Line="19" Column="6" NotebookId="1" />
+      <File FileName="Assets/Scripts/CloudBounceNew.cs" Line="49" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Score/Score.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/ThirdPlayerController.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/Score/GameOverTest.cs" Line="44" Column="28" NotebookId="1" />
+      <File FileName="Assets/Scripts/CameraControl.cs" Line="45" Column="31" NotebookId="1" />
+      <File FileName="../../../../../Downloads/Unity-CheckPoints-master/Assets/Scripts/PlayerController.cs" Line="39" Column="47" NotebookId="1" />
+      <File FileName="../../../../../Downloads/Unity-CheckPoints-master/Assets/Scripts/CheckPoint.cs" Line="6" Column="1" NotebookId="1" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="0" Y="23" Width="1053" Height="814">
+        <Files>
+          <File FileName="Assets/Scripts/PlayerController.cs" Line="89" Column="10" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

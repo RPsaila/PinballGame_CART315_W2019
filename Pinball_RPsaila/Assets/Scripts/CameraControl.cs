@@ -42,7 +42,7 @@ public class CameraControl : MonoBehaviour
         currentScore = theScore.GetComponent<Score>().score;
         Debug.Log(currentScore);
         // Check for score and swap accordingly
-        if (currentScore >= 1500)
+        if (currentScore >= 10)
         {
             lobbyCam.enabled = false;
             thirdPlayerCam.enabled = true;

@@ -41,7 +41,7 @@ public class GameOverTest : MonoBehaviour
 
     public void OnTriggerEnter(Collider collider)
     {
-        if (currentScore < 1500 && collider.gameObject.tag == "Player")
+        if (currentScore <= 10 && collider.gameObject.tag == "Player")
             {
             theball.transform.position = initialposition;
         }

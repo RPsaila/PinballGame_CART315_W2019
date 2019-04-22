@@ -7,7 +7,7 @@ public class CameraControl : MonoBehaviour
 
     // Code Adapted from : https://answers.unity.com/questions/16146/changing-between-cameras.html
 
-    Score myScoreScript;
+    ScorePinball myScoreScript;
 
     // Define additional GameObjects
     public GameObject theScore;
@@ -33,14 +33,14 @@ public class CameraControl : MonoBehaviour
     {
         // Add inspector Cameras here
         //cameras.Add(lobbyCam);
-        currentScore = theScore.GetComponent<Score>().score;
+        currentScore = theScore.GetComponent<ScorePinball>().score;
         Debug.Log(currentScore);
     }
 
     void Update()
     {
-        currentScore = theScore.GetComponent<Score>().score;
-        Debug.Log(currentScore);
+        currentScore = theScore.GetComponent<ScorePinball>().score;
+        //Debug.Log(currentScore);
         // Check for score and swap accordingly
         if (currentScore >= 10)
         {

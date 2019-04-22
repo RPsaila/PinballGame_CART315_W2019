@@ -31,8 +31,8 @@ public class Bumper : MonoBehaviour
     {
         if (timer == 0)
         {
-            thescoreobject.GetComponent<Score>().AddScore(5);
-            thescoreobject.GetComponent<Score>().Addmultiplier(1);
+            thescoreobject.GetComponent<ScorePinball>().AddScore(5);
+            thescoreobject.GetComponent<ScorePinball>().Addmultiplier(1);
         }
 
         this.GetComponent<AudioSource>().Play();

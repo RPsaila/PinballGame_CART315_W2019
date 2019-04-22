@@ -6,6 +6,7 @@ public class CloudBounceNew : MonoBehaviour
 {
 
     public GameObject player;
+    private int timer;
 
     public float cloudFloatingPosition;
 
@@ -27,13 +28,13 @@ public class CloudBounceNew : MonoBehaviour
 
     void FixedUpdate()
     {
-
+        timer = player.GetComponent<PlayerController>().timer;
 
     }
 
     public void OnCollisionEnter(Collision collision)
     {
-        player.GetComponent<PlayerController>().timer = 200;
+        timer = 200;
         player.GetComponent<PlayerController>().playerFloatingPosition = cloudFloatingPosition;
 
         player.GetComponent<Rigidbody>().velocity = new Vector3(0, 10, 0);

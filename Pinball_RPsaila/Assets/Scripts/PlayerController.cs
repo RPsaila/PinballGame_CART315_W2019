@@ -9,7 +9,9 @@ public class PlayerController : MonoBehaviour
     // Jump adapted & Checkpoint Code taken from https://github.com/santiandrade/Unity-CheckPoints
 
     GameOverTest myGameOverPinballScript;
-    Score myScoreScript;
+    ScorePinball myScoreScript;
+
+    public GameObject GameControlObject;
 
     public float speed;
     public float JumpForce;
@@ -23,18 +25,19 @@ public class PlayerController : MonoBehaviour
     public float playerFloatingPosition;
 
     private bool isJumping;
+    private bool colliderIsOn;
 
     void Start()
     {
-        myScoreScript = GetComponent<Score>();
-        currentScore = theScore.GetComponent<Score>().score;
+        myScoreScript = GetComponent<ScorePinball>();
+        currentScore = theScore.GetComponent<ScorePinball>().score;
         myGameOverPinballScript = GetComponent<GameOverTest>();
         rb = GetComponent<Rigidbody>();
     }
 
     public void FixedUpdate()
     {
-        currentScore = theScore.GetComponent<Score>().score;
+        currentScore = theScore.GetComponent<ScorePinball>().score;
         if (currentScore >= 10)
         {
             BallMovement();
@@ -65,7 +68,7 @@ public class PlayerController : MonoBehaviour
 
    public void BallMovement()
     {
-        Debug.Log("move");
+        //Debug.Log("move");
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         float moveJump = Input.GetAxis("Jump");
@@ -85,12 +88,51 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        //Debug.Log("collisiondetected");
         isJumping = false;
 
         if (collision.gameObject.tag == "Enemy")
         {
-            rb.transform.position = CheckPoint.GetActiveCheckPointPosition();
+            Debug.Log("collisiondetectedwithenemy");
+            transform.position = CheckPoint.GetActiveCheckPointPosition();
         }
+        if (collision.gameObject.tag == "Plane")
+        {
+            //WE WANT THIS ON THE PLANE NOT THE PLAYER
+            Debug.Log("collisiondetectedwithplane");
+            GetComponent<SphereCollider>().enabled = false;
+            GameControlObject.GetComponent<GameControl>().healthScore = GameControlObject.GetComponent<GameControl>().healthScore - 10f;
+        }
+        if (collision.gameObject.tag == "Coin")
+        {
+            GameControlObject.GetComponent<GameControl>().healthScore = GameControlObject.GetComponent<GameControl>().healthScore + 10f;
+        }
+        //if (collision.other 
+        //if (collision.gameObject.tag == "Enemy")
+        //{
+        //    Debug.Log("collisiondetectedwithenemy");
+        //    transform.position = CheckPoint.GetActiveCheckPointPosition();
+        //}
     }
+
+
+    //void IsColliderOn()
+    //{
+    //    if (colliderIsOn == true)
+    //    {
+    //        GetComponent<Rigidbody>().enabled = true;
+    //        GetComponent<SphereCollider>().isTrigger = true;
+    //    }
+    //    if (colliderIsOn == false)
+
+    //    {
+    //        GetComponent<SphereCollider>().isTrigger = false;
+
+    //    }
+
+    //}
+
+
+
 
 }

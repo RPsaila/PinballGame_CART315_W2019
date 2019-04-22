@@ -7,7 +7,7 @@ public class GameOverTest : MonoBehaviour
     private Vector3 initialposition;
     public GameObject theball;
 
-    Score myScoreScript;
+    ScorePinball myScoreScript;
     public List<GameObject> balls;
     public GameObject[] newBalls;
 
@@ -19,8 +19,8 @@ public class GameOverTest : MonoBehaviour
     IEnumerator Start()
     {
         initialposition = theball.transform.position;
-        myScoreScript = GetComponent<Score>();
-        currentScore = theScore.GetComponent<Score>().score;
+        myScoreScript = GetComponent<ScorePinball>();
+        currentScore = theScore.GetComponent<ScorePinball>().score;
         yield return new WaitForEndOfFrame();
     }
 
@@ -30,7 +30,7 @@ public class GameOverTest : MonoBehaviour
 
         GameObject.FindGameObjectsWithTag("SpawnedBalls");
         newBalls = GameObject.FindGameObjectsWithTag("SpawnedBalls");
-        currentScore = theScore.GetComponent<Score>().score;
+        currentScore = theScore.GetComponent<ScorePinball>().score;
 
         //KEEPING FOR LATER USE
         //foreach (GameObject SpawnedBalls in myScoreScript.balls)

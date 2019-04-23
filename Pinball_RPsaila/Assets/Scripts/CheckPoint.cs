@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+// taken from https://github.com/santiandrade/Unity-CheckPoints
+
 public class CheckPoint : MonoBehaviour 
 {
     #region Public Variables

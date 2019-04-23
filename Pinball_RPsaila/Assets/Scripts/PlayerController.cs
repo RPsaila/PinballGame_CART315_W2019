@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public GameObject GameControlObject;
 
     public float speed;
+    public float maximumSpeed;
     public float JumpForce;
 
     public TMPro.TextMeshPro theScore;
@@ -25,7 +26,8 @@ public class PlayerController : MonoBehaviour
     public float playerFloatingPosition;
 
     private bool isJumping;
-    private bool colliderIsOn;
+
+    private List<AudioSource> soundList = new List<AudioSource>();
 
     void Start()
     {
@@ -33,10 +35,12 @@ public class PlayerController : MonoBehaviour
         currentScore = theScore.GetComponent<ScorePinball>().score;
         myGameOverPinballScript = GetComponent<GameOverTest>();
         rb = GetComponent<Rigidbody>();
+        //speed = Vector3.Magnitude(GetComponent<Rigidbody>().velocity);
     }
 
     public void FixedUpdate()
     {
+
         currentScore = theScore.GetComponent<ScorePinball>().score;
         if (currentScore >= 10)
         {
@@ -86,7 +90,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         //Debug.Log("collisiondetected");
         isJumping = false;
@@ -100,7 +104,7 @@ public class PlayerController : MonoBehaviour
         {
             //WE WANT THIS ON THE PLANE NOT THE PLAYER
             Debug.Log("collisiondetectedwithplane");
-            GetComponent<SphereCollider>().enabled = false;
+            //GetComponent<SphereCollider>().enabled = false;
             GameControlObject.GetComponent<GameControl>().healthScore = GameControlObject.GetComponent<GameControl>().healthScore - 10f;
         }
         if (collision.gameObject.tag == "Coin")
@@ -115,24 +119,52 @@ public class PlayerController : MonoBehaviour
         //}
     }
 
+    // Adapted code from https://answers.unity.com/questions/408115/play-audio-sources-in-trigger-zone-when-player-ent.html for Player Audio Management
+    // Tested and not working....
 
-    //void IsColliderOn()
+    //void OnTriggerEnter(BoxCollider other)
     //{
-    //    if (colliderIsOn == true)
+    //    if (other.tag == "Plane")
     //    {
-    //        GetComponent<Rigidbody>().enabled = true;
-    //        GetComponent<SphereCollider>().isTrigger = true;
+    //        soundList.Add(other.GetComponent<AudioSource>());  // add it to the list
+    //        PlaySound();
     //    }
-    //    if (colliderIsOn == false)
-
-    //    {
-    //        GetComponent<SphereCollider>().isTrigger = false;
-
-    //    }
-
     //}
 
+    //void OnTriggerExit(BoxCollider other)
+    //{   
+    //    if (other.tag == "Plane")
+    //    { // sound object leaving the trigger?
+    //        soundList.Remove(other.GetComponent<AudioSource>()); // yes: remove it from the list
+    //        StopSound();
+    //    }
+    //}
 
+    //void PlaySound()
+    //{
+    //    foreach (AudioSource sound in soundList)
+    //    { // play all sounds in the list
+    //        sound.Play();
+    //    }
+    //}
 
+    //void StopSound()
+    //{
+    //    foreach (AudioSource sound in soundList)
+    //        {
+    //        sound.Stop(); // yes: stop all sounds in the list
 
+    //    }
+    //}
+      
+ //if (speed > maximumSpeed)
+ 
+ // {
+ //     float brakeSpeed = speed - maximumSpeed;  // calculate the speed decrease
+
+ //   Vector3 normalisedVelocity = rigidbody.velocity.normalized;
+ //   Vector3 brakeVelocity = normalisedVelocity * brakeSpeed;  // make the brake Vector3 value
+
+ //   rigidbody.AddForce(-brakeVelocity);  // apply opposing brake force
+ // }
 }

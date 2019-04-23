@@ -34,7 +34,7 @@ public class CameraControl : MonoBehaviour
         // Add inspector Cameras here
         //cameras.Add(lobbyCam);
         currentScore = theScore.GetComponent<ScorePinball>().score;
-        Debug.Log(currentScore);
+        //Debug.Log(currentScore);
     }
 
     void Update()
